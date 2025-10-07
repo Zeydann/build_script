@@ -5,7 +5,7 @@ rm -rf .repo/local_manifests/
 rm -rf prebuilts/clang/host/linux-x86
 
 # Initialize ROM manifest
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 
 # Sync the repo with force to ensure a clean sync
 /opt/crave/resync.sh
@@ -14,7 +14,7 @@ repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 . build/envsetup.sh
 
 # Choose the target device
-lunch lineage_rodin-bp1a-userdebug
+lunch infinity_rodin-userdebug
 
 # full target
-m evolution
+mka bacon
