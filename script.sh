@@ -18,5 +18,8 @@ cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_nati
 # Choose the target device
 lunch lineage_rodin-bp1a-userdebug
 
+# Make cleaninstall
+make installclean
+
 # full target
 m bacon
