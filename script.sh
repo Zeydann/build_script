@@ -4,7 +4,7 @@
 rm -rf .repo/local_manifests/
 
 # Initialize ROM manifest
-repo init -u https://github.com/AviumUI/android_manifests -b avium-15 --git-lfs
+repo init -u https://github.com/LumineDroid/platform_manifest.git -b bynx --git-lfs
 
 # Sync the repo with force to ensure a clean sync
 /opt/crave/resync.sh
@@ -16,10 +16,4 @@ cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_nati
 . build/envsetup.sh
 
 # Choose the target device
-lunch lineage_rodin-bp1a-userdebug
-
-# Make cleaninstall
-make installclean
-
-# full target
-m bacon
+brunch rodin userdebug
