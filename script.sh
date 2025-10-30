@@ -16,7 +16,7 @@ rm -rf packages/apps/Updater
 git clone https://github.com/Zeydann/packages_apps_Updater-inf.git -b 16 packages/apps/Updater
 
 # ViperFX
-git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+#git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
 # B
 cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_native/commit/9b1091664329d9b8055d246210cf442b8d7eb5da.patch | git am && cd ../..
