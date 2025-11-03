@@ -24,6 +24,9 @@ rm -rf .repo/local_manifests/
 # Set up th build environment
 . build/envsetup.sh
 
+# clean
+make installclean
+
 # Choose the target device
 lunch infinity_rodin-userdebug
 
