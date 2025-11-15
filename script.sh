@@ -4,28 +4,28 @@
 rm -rf .repo/local_manifests/
 
 # Initialize ROM manifest
-#repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 
 # Sync the repo with force to ensure a clean sync
-#/opt/crave/resync.sh
+/opt/crave/resync.sh
 
-# rm -rf 
-#rm -rf packages/apps/Updater
-
-# add updater
-#git clone https://github.com/Zeydann/packages_apps_Updater-inf.git -b 16 packages/apps/Updater
+# keys
+git clone https://github.com/Zeydann/android_vendor_private_keys vendor/private/keys
 
 # ViperFX
-#git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
 # B
-#cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_native/commit/9b1091664329d9b8055d246210cf442b8d7eb5da.patch | git am && cd ../..
+cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_native/commit/9b1091664329d9b8055d246210cf442b8d7eb5da.patch | git am && cd ../..
+
+# c
+rm -rf hardware/lineage/compat && rm -rf hardware/lineage/interfaces 
+
+# d
+git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-22.2 hardware/lineage/compat && git clone https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-22.2 hardware/lineage/interfaces
 
 # Set up th build environment
 . build/envsetup.sh
 
 # Choose the target device
-lunch infinity_rodin-userdebug
-
-# full target
-m bacon
+brunch rodin userdebug
