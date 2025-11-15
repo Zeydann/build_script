@@ -4,19 +4,19 @@
 rm -rf .repo/local_manifests/
 
 # Initialize ROM manifest
-#repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 
 # Sync the repo with force to ensure a clean sync
-#/opt/crave/resync.sh
+/opt/crave/resync.sh
 
 # keys
-#git clone https://github.com/Zeydann/android_vendor_private_keys vendor/private/keys
+git clone https://github.com/Zeydann/android_vendor_private_keys vendor/private/keys
 
 # ViperFX
-#git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
+git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
 # B
-#cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_native/commit/9b1091664329d9b8055d246210cf442b8d7eb5da.patch | git am && cd ../..
+cd frameworks/native && curl https://github.com/pos-xyz-personal/frameworks_native/commit/9b1091664329d9b8055d246210cf442b8d7eb5da.patch | git am && cd ../..
 
 # c
 #rm -rf hardware/lineage/compat && rm -rf hardware/lineage/interfaces 
@@ -28,4 +28,7 @@ rm -rf .repo/local_manifests/
 . build/envsetup.sh
 
 # Choose the target device
-brunch rodin userdebug
+lunch lineage_rodin-bp1a-userdebug
+
+# Full Target
+m evolution
