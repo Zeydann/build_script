@@ -10,7 +10,7 @@ repo init -u https://github.com/Evolution-X/manifest -b bka-q1 --git-lfs
 /opt/crave/resync.sh
 
 # keys
-git clone https://github.com/Zeydann/android_vendor_private_keys vendor/private/keys
+#git clone https://github.com/Zeydann/android_vendor_private_keys vendor/private/keys
 
 # rm -rf
 rm -rf build/soong && git clone https://github.com/Zeydann/build_soong-evox.git -b bka-q1 build/soong
