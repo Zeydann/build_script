@@ -4,7 +4,7 @@
 rm -rf .repo/local_manifests/
 
 # Initialize ROM manifest
-repo init -u https://github.com/Evolution-X/manifest -b bka-q1 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs
 
 # Sync the repo with force to ensure a clean sync
 /opt/crave/resync.sh
